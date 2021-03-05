@@ -1,0 +1,22 @@
+.navbar{
+    background-color:#001845;
+    color: rgb(80, 177, 72);
+    margin: 20vw,10vh;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:space-between;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        li{
+            margin: 10%;
+            text-decoration: none;
+            list-style: none;
+            text-align: right;
+            font-size: 24px;
+        }
+    }
+}
