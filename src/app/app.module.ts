@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire';
@@ -13,6 +12,8 @@ import { LoginComponent } from './components/login/login.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { ListaComponent } from './components/lista/lista.component';
+import { HttpClientModule } from '@angular/common/http';
+import { MoviesComponent } from './components/movies/movies.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ListaComponent } from './components/lista/lista.component';
     LoginComponent,
     NavbarComponent,
     HomeComponent,
-    ListaComponent
+    ListaComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +31,8 @@ import { ListaComponent } from './components/lista/lista.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireStorageModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
