@@ -10,7 +10,7 @@
     <div class="wrapper">
         <ul *ngIf= "peliculas">
             <li *ngFor= "let peli of peliculas|async">
-                <!-- <img src= alt=""> -->
+                <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
                 <h3 class='title'>{{peli.title}}</h3>
                 <p class='language'>{{peli.original_language}}</p>
                 <p class='popularity'>{{peli.popularity}}</p>

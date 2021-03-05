@@ -16,10 +16,6 @@ export class ListaComponent implements OnInit {
   peliculas: Observable<any>;
 
   ngOnInit(): void {
-  //   this._http.getMovies().subscribe(data => {
-  //     this.peliculas = data;
-  //     console.log(this.peliculas);
-  //   })
   this.peliculas = this._http.getMovies();
   }
 }
