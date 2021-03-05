@@ -1,6 +1,8 @@
+@import 'src/styles.scss';
+
 .navbar{
-    background-color:#001845;
-    color: rgb(80, 177, 72);
+    background-color: $color-principal;
+    color: $color-secundario;
     margin: 20vw,10vh;
     padding: 2%;
     display: flex;
@@ -17,6 +19,14 @@
             list-style: none;
             text-align: right;
             font-size: 24px;
+            a{
+                text-decoration: none;
+                color: $color-secundario;
+
+                :visited{
+                    color: inherit;
+                }
+            }
         }
     }
 }
