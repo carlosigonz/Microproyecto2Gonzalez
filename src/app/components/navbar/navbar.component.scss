@@ -19,14 +19,14 @@
             list-style: none;
             text-align: right;
             font-size: 24px;
-            a{
-                text-decoration: none;
-                color: $color-secundario;
-
-                :visited{
-                    color: inherit;
-                }
+            border-radius: 5rem;
+            :hover{
+                background-color: #395383;
             }
         }
+    }
+    a{
+        text-decoration: none;
+        color: $color-secundario;
     }
 }

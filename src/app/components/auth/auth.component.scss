@@ -1,8 +1,13 @@
+@import 'src/styles.scss';
+
 .google-button{
     background-color: gray;
-    color: #76c339;
+    color: $color-secundario;
     font-size: 1.2rem;
     padding: 1%;
     margin: 0;
     border-radius: 2rem;
+    :hover{
+        background-color: #5e5d5d;
+    }
 }
