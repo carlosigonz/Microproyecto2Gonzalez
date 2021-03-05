@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { HttpService } from 'src/app/services/http.service';
 
 @Component({
@@ -8,8 +9,17 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ListaComponent implements OnInit {
 
+  
+
   constructor( private _http: HttpService ) { }
 
+  peliculas: Observable<any>;
+
   ngOnInit(): void {
+  //   this._http.getMovies().subscribe(data => {
+  //     this.peliculas = data;
+  //     console.log(this.peliculas);
+  //   })
+  this.peliculas = this._http.getMovies();
   }
 }

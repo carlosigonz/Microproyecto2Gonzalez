@@ -6,4 +6,16 @@
         </div>
         <button type="submit" id="buscar">Buscar Pelicula</button>
     </form>
+
+    <div class="wrapper">
+        <ul *ngIf= "peliculas">
+            <li *ngFor= "let peli of peliculas|async">
+                <!-- <img src= alt=""> -->
+                <h3 class='title'>{{peli.title}}</h3>
+                <p class='language'>{{peli.original_language}}</p>
+                <p class='popularity'>{{peli.popularity}}</p>
+
+            </li>
+        </ul>
+    </div>
 </div>
