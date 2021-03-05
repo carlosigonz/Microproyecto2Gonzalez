@@ -1,0 +1,32 @@
+@import 'src/styles.scss';
+
+.navbar{
+    background-color: $color-principal;
+    color: $color-secundario;
+    margin: 20vw,10vh;
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content:space-between;
+    ul{
+        display: flex;
+        justify-content: space-between;
+        text-align: right;
+        li{
+            margin: 10%;
+            text-decoration: none;
+            list-style: none;
+            text-align: right;
+            font-size: 24px;
+            border-radius: 5rem;
+            :hover{
+                background-color: #395383;
+            }
+        }
+    }
+    a{
+        text-decoration: none;
+        color: $color-secundario;
+    }
+}
