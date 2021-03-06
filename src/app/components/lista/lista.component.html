@@ -1,21 +1,19 @@
-<div class="container">
+
+    <div class="search-group">
     <h2>Lista de peliculas</h2>
     <form action="">
-        <div class="form-group">
-            <input type="text" id = "inputValue" required>
-        </div>
-        <button type="submit" id="buscar">Buscar Pelicula</button>
+        <input type="text" id = "inputValue" required placeholder="Busca una pelicula.">
+        <button type="submit" id="search-button">Buscar</button>
     </form>
-
+    </div>
     <div class="wrapper">
         <ul *ngIf= "peliculas">
             <li *ngFor= "let peli of peliculas|async">
                 <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
-                <h3 class='title'>{{peli.title}}</h3>
+                <!-- <h3 class='title'>{{peli.title}}</h3>
                 <p class='language'>{{peli.original_language}}</p>
-                <p class='popularity'>{{peli.popularity}}</p>
+                <p class='popularity'>{{peli.popularity}}</p> -->
 
             </li>
         </ul>
     </div>
-</div>

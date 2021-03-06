@@ -1,4 +1,62 @@
-.container{
-    margin: 2rem 4rem
-    
+@import 'src/styles.scss';
+
+.body{
+    background-color: $azul;
+}
+
+.search-group{
+    margin: 2rem 4rem;
+    padding: 1rem 0.5rem;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    color: $color-secundario;
+    h2{
+        font-size: 50px;
+        margin-bottom: 1rem;
+    }
+    .form{
+        width: 100px;
+    }
+    #input-value{
+        width: 200vh;
+    }
+    #search-button{
+        border-radius: 5rem;
+        padding: 0.3rem;
+        font-size: 17px;
+        background-color: $color-principal;
+        color: $color-secundario;
+        margin-left: 1rem;
+        :hover{
+            background-color: $azul;
+        }
+    }
+}
+
+.input{
+    columns: 50;
+    border: none;
+}
+
+#input-value{
+    columns: 50;
+    border: none;
+}
+
+.wrapper{
+    margin: 2rem 4rem;
+    img{
+        height: 30rem; width: 25rem;
+    }
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        list-style: none;
+    }
 }
