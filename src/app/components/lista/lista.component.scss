@@ -1,7 +1,7 @@
 @import 'src/styles.scss';
 
-.body{
-    background-color: $azul;
+body{
+    background-color: $azul !important;
 }
 
 .search-group{
@@ -29,7 +29,7 @@
         font-size: 17px;
         background-color: $color-principal;
         color: $color-secundario;
-        margin-left: 1rem;
+        margin-top: 1rem;
         :hover{
             background-color: $azul;
         }
@@ -59,4 +59,10 @@
         align-content: center;
         list-style: none;
     }
+}
+
+input{
+    width: 50vw;
+    height: 10vh;
+    font-size: 20px;
 }
