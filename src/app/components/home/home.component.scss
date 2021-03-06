@@ -1,7 +1,10 @@
 @import 'src/styles.scss';
+html{
+    background-color: $azul !important;
+}
 
 body{
-    background-color: $azul;
+    background-color: $azul !important;
 }
 
 .container{
