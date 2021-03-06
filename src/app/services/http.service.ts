@@ -7,10 +7,11 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class HttpService {
+  page=1;
   APIKEY = 'ea4007a015008ecd693c5ef6e79bf3b2';
   URL = `https://api.themoviedb.org/3/search/movie?api_key=${this.APIKEY}&query=`;
   BUSQUEDA = 'https://api.themoviedb.org/3/search/movie?api_key=ea4007a015008ecd693c5ef6e79bf3b2&query=';
-  LISTA = 'https://api.themoviedb.org/3/discover/movie?api_key=ea4007a015008ecd693c5ef6e79bf3b2';
+  LISTA =`https://api.themoviedb.org/3/discover/movie?api_key=ea4007a015008ecd693c5ef6e79bf3b2&page=${this.page}`;
   ESTRENOS = 'https://api.themoviedb.org/3/movie/upcoming?api_key=ea4007a015008ecd693c5ef6e79bf3b2';
 
   constructor(private http: HttpClient) { }
@@ -18,6 +19,15 @@ export class HttpService {
 
   getMovies(): Observable<any>{
     return this.http.get<any>(this.LISTA).pipe(map((data:any)=>data.results))
+  }
+
+  nextList(){
+    this.page = this.page+1;
+    this.getMovies();
+  }
+
+  getEstrenos(): Observable<any>{
+    return this.http.get<any>(this.ESTRENOS).pipe(map((data:any)=>data.results))
   }
 
 }

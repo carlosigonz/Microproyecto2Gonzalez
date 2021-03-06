@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { HttpService } from 'src/app/services/http.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _http: HttpService) { }
+
+  peliculas: Observable<any>;
 
   ngOnInit(): void {
+    this.peliculas = this._http.getEstrenos();
   }
 
 }
