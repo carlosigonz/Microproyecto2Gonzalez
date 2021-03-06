@@ -17,6 +17,10 @@ export class HttpService {
   constructor(private http: HttpClient) { }
   
 
+  searchMovies(val:string):Observable<any>{
+    return this.http.get<any>(`https://api.themoviedb.org/3/search/movie?api_key=${this.APIKEY}&language=en-US&query=${val}`).pipe(map((data:any)=>data.results))
+  }
+
   getMovies(): Observable<any>{
     return this.http.get<any>(this.LISTA).pipe(map((data:any)=>data.results))
   }

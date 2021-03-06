@@ -1,19 +1,13 @@
 
     <div class="search-group">
-    <h2>Lista de peliculas</h2>
-    <form action="">
-        <input type="text" id = "inputValue" required placeholder="Busca una pelicula.">
-        <button type="submit" id="search-button">Buscar</button>
-    </form>
+    <h2>Lista de peliculas</h2> 
+    <input type="text" [(ngModel)]= "input">
+    <button (click)="getSearch()" type="button" id="search-button">Buscar</button>
     </div>
     <div class="wrapper">
         <ul *ngIf= "peliculas">
             <li *ngFor= "let peli of peliculas|async">
                 <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
-                <!-- <h3 class='title'>{{peli.title}}</h3>
-                <p class='language'>{{peli.original_language}}</p>
-                <p class='popularity'>{{peli.popularity}}</p> -->
-
             </li>
         </ul>
     </div>
