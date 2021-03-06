@@ -26,6 +26,11 @@ body{
     img{
         height: 200px;
         width: 180px;
+        :hover{
+            height: 230px;
+            width: 210px;
+            animation-timing-function: linear;
+        }
     }
     h3{
         padding: 1rem;
@@ -52,9 +57,20 @@ body{
     p{
         color: black;
     }
+    a{
+        text-decoration: none;
+        color: inherit;
+        :visited{
+            color: inherit;
+        }
+    }
 .link-lista{
     background-color: rgb(219, 123, 13);
     padding: 1rem;
     border-radius: 5rem;
     margin-top: 1rem;
+    :hover{
+        cursor: pointer;
+        background-color: rgb(134, 80, 17);
+    }
 }
