@@ -22,6 +22,7 @@ body{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    color: $color-secundario;
     img{
         height: 200px;
         width: 180px;
@@ -47,6 +48,9 @@ body{
     }
     h4{
         font-size: 20px;
+    }
+    p{
+        color: black;
     }
 .link-lista{
     background-color: rgb(219, 123, 13);
