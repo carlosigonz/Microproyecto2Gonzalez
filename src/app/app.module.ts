@@ -17,7 +17,6 @@ import { MoviesComponent } from './components/movies/movies.component';
 import { FormsModule } from '@angular/forms';
 import { DetallesComponent } from './components/detalles/detalles.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
