@@ -1,3 +1,10 @@
 <div class="google-button">
-    <button class=google-button type="button" (click)="googleLogin()"><img src='../assets/google-symbol.png'>Ingresar con Google</button>
+    
+    <ng-template [ngIf]= "ingresado()" [ngIfElse]= "login">
+    <button class=google-button type="button" (click)="googleLogin()" ><img src='../assets/google-symbol.png'>Ingresar con Google</button>
+    </ng-template>
+
+    <ng-template #login>
+        <button class =google-button>Cerrar Sesión</button>
+    </ng-template>
 </div>

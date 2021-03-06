@@ -1,7 +1,9 @@
 import { Component, OnInit,Output,Input,EventEmitter } from '@angular/core';
+import { FirebaseApp } from '@angular/fire';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
+
 
 @Component({
   selector: 'app-auth',
@@ -9,6 +11,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
   styleUrls: ['./auth.component.scss']
 })
 export class AuthComponent implements OnInit {
+
 
   constructor(
     private authService: AutenticacionService,
@@ -25,4 +28,11 @@ export class AuthComponent implements OnInit {
     }
   }
 
+  ingresado(){
+    if(this.authService.isAuthenticated){
+      return true;
+    }
+    return false;
+  }
+  
 }

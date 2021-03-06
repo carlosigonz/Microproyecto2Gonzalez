@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import firebase from "firebase"
+import { AutenticacionService } from 'src/app/services/autenticacion.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -7,7 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  user: firebase.User = null;
+
+  constructor(public authService: AutenticacionService) { }
+
+  // this.authService.getCurrentUser().subscribe(user => {
+  // this.user = user;
+    // })
 
   ngOnInit(): void {
   }
