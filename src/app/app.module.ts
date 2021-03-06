@@ -15,6 +15,9 @@ import { ListaComponent } from './components/lista/lista.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './components/movies/movies.component';
 import { FormsModule } from '@angular/forms';
+import { DetallesComponent } from './components/detalles/detalles.component';
+import { ActivatedRoute } from '@angular/router';
+
 
 @NgModule({
   declarations: [
@@ -24,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     HomeComponent,
     ListaComponent,
-    MoviesComponent
+    MoviesComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { FormsModule } from '@angular/forms';
     AngularFireStorageModule,
     AngularFireAuthModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ActivatedRoute
   ],
   providers: [],
   bootstrap: [AppComponent]

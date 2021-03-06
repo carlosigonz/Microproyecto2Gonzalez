@@ -4,12 +4,13 @@
     <input type="text" [(ngModel)]= "input">
     <button (click)="getSearch()" type="button" id="search-button">Buscar</button>
     </div>
-    <div class="wrapper">
+    <div class="wrapper" [routerLink]>
         <ul *ngIf= "peliculas">
-            <a href="#">
             <li *ngFor= "let peli of peliculas|async">
+                <a href="detalles/{{peli.id}}" routerLink='detalles/{{peli.id}}'>
                 <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
+                </a>
             </li>
-            </a>
+            
         </ul>
     </div>
