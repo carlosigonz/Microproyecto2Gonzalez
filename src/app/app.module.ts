@@ -16,7 +16,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { MoviesComponent } from './components/movies/movies.component';
 import { FormsModule } from '@angular/forms';
 import { DetallesComponent } from './components/detalles/detalles.component';
-import { ActivatedRoute } from '@angular/router';
 
 
 @NgModule({
@@ -38,8 +37,7 @@ import { ActivatedRoute } from '@angular/router';
     AngularFireStorageModule,
     AngularFireAuthModule,
     HttpClientModule,
-    FormsModule,
-    ActivatedRoute
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
