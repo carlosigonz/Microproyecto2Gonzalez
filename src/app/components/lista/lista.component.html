@@ -6,8 +6,10 @@
     </div>
     <div class="wrapper">
         <ul *ngIf= "peliculas">
+            <a href="#">
             <li *ngFor= "let peli of peliculas|async">
                 <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
             </li>
+            </a>
         </ul>
     </div>

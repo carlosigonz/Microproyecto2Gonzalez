@@ -59,6 +59,18 @@ body{
         align-content: center;
         list-style: none;
     }
+    a{
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        :hover{
+            height: 31rem;
+            width: 28rem;
+        }
+    }
 }
 
 input{

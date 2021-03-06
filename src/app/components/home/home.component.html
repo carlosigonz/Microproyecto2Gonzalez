@@ -5,11 +5,12 @@
     <h3>¡Proximos Estrenos!</h3>
     <ul *ngIf= "peliculas">
         <li *ngFor= "let peli of peliculas | async | slice:0:8">
+            <a href="#">
             <img src="https://image.tmdb.org/t/p/w500{{peli.poster_path}}" alt={{peli.title}}>
             <h4 class='title'>{{peli.title}}</h4>
             <p class='language'>Idioma: {{peli.original_language}}</p>
             <p class='popularity'>Popularidad: {{peli.popularity}}</p>
-
+            </a>
         </li>
     </ul>
     <a href="" routerLink = 'lista'><button class=link-lista>Ver todas las peliculas</button></a>
