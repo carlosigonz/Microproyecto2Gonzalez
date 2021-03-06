@@ -2,5 +2,52 @@
 
 body{
     background-color: $azul;
-    
+}
+
+.container{
+    margin: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    color: $color-secundario;
+    font-size: 34px;
+}
+
+.wrapper{
+    margin: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img{
+        height: 200px;
+        width: 180px;
+    }
+    h3{
+        padding: 1rem;
+        color: $color-secundario;
+        font-size: 30px;
+    }
+    ul{
+        display: flex;
+        flex-wrap: nowrap;
+        overflow:hidden;
+        overflow-x: auto;
+        scroll-snap-type: mandatory;
+        padding: 0 1rem;
+        list-style: none;
+        }
+
+        li{
+            text-decoration: none;
+        }
+    }
+    h4{
+        font-size: 20px;
+    }
+.link-lista{
+    background-color: rgb(219, 123, 13);
+    padding: 1rem;
+    border-radius: 5rem;
+    margin-top: 1rem;
 }
